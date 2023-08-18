@@ -1,6 +1,6 @@
 function App(props) {
   return (
-    <div className="container">
+    <div className="container app">
       <props.outlet />
     </div>
   );

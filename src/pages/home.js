@@ -1,7 +1,12 @@
+import SearchBar from "../components/search_bar";
+
 const Home = () => {
   return (
     <>
-      <p>Bye</p>
+      <h2 className="mt-4">
+        <b>Notes</b>
+      </h2>
+      <SearchBar />
     </>
   );
 };
