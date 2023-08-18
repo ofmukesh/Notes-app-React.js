@@ -1,10 +1,6 @@
-
 function App(props) {
-    
   return (
-    <div>
-      <h1>React App</h1>
-      <p>My first React app</p>
+    <div className="container">
       <props.outlet />
     </div>
   );
