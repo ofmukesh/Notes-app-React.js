@@ -1,0 +1,33 @@
+* {
+    transition-duration: .3s !important;
+}
+
+/* Notes Card */
+.notes_card {
+    height: 250px;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    color: white;
+    font-family: "system-ui";
+}
+
+/* Content */
+.notes_content {
+    flex-grow: 1;
+}
+
+/* Footer */
+.notes_footer .delete_btn:hover {
+    transform: scale(1.1);
+    transition: transform .3s;
+}
+
+.notes_footer .delete_btn:focus {
+    box-shadow: none !important;
+}
+
+.notes_footer .delete_btn i {
+    font-weight: bold;
+}

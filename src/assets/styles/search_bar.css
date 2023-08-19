@@ -22,7 +22,6 @@
 
 .search_input .input::placeholder {
     font-family: inherit;
-    letter-spacing: 1px;
 }
 
 .search_input .labelforsearch {

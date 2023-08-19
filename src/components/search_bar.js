@@ -2,7 +2,7 @@ import "../assets/styles/search_bar.css";
 
 const SearchBar = () => {
   return (
-    <div className="search_input mt-4">
+    <div className="search_input">
       <label htmlFor="input" className="labelforsearch">
         <div>
           <svg viewBox="0 0 512 512" className="searchIcon">
