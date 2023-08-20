@@ -1,9 +1,10 @@
 const NotesCard = (props) => {
-  const { title, content, date, backgroundColor } = props.carddata;
+  console.log(props.carddata);
+  const { title, content, date, color } = props.carddata;
   return (
     <div
       className="notes_card mt-2 py-2 px-3"
-      style={{ backgroundColor: backgroundColor }}
+      style={{ backgroundColor: color }}
     >
       <h4 className="notes_header">{title}</h4>
       <p className="notes_content">{content}</p>

@@ -1,3 +1,3 @@
 export const Notes_types = {
-  GET: "GET_NOTES",
+  ADD_NOTE: "ADD_NOTE",
 };

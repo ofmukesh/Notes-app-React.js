@@ -1,5 +1,5 @@
-* {
-    transition-duration: .3s !important;
+.notes_container * {
+    transition-duration: .2s !important;
 }
 
 /* Notes Header */
@@ -26,6 +26,8 @@
 .notes_header .add_btn:active {
     box-shadow: none;
 }
+
+/* ----------------------- */
 
 /* Notes Card */
 .notes_card {
@@ -56,3 +58,51 @@
 .notes_footer .delete_btn i {
     font-weight: bold;
 }
+
+/* ----------------------- */
+
+
+/* add notes */
+.modal {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    animation: modalPop 0.3s ease-in-out;
+}
+
+@keyframes modalPop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.add_note_title{
+    box-shadow: none !important;
+}
+
+.add_note_title:focus {
+    box-shadow: none !important;
+}
+
+.add_note_color_options button {
+    width: 25px;
+    height: 20px;
+    margin-left: 2px;
+}
+
+.add_note_color_options button:focus {
+    box-shadow: none !important;
+}
+.add_note_color_options .selected {
+    border: 3px solid #aaa;
+}
+
+.add_note_content:focus{
+    box-shadow: none !important;
+}
+
+/* ----------------------- */
