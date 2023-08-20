@@ -2,6 +2,31 @@
     transition-duration: .3s !important;
 }
 
+/* Notes Header */
+.notes_header .add_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.notes_header .add_btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.notes_header .add_btn:active {
+    box-shadow: none;
+}
+
 /* Notes Card */
 .notes_card {
     height: 250px;
