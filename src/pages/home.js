@@ -3,9 +3,17 @@ import SearchBar from "../components/search_bar";
 import NotesCard from "../components/notes_card";
 import "../assets/styles/notes.css";
 import AddNote from "../components/add_note";
+import { useDispatch } from "react-redux";
+import { Notes_types } from "../redux/actions";
 
 const Home = () => {
-  const notes = useSelector((state) => state.notes.notes);
+  const dispatch = useDispatch(); // dispatch action
+  const notes = useSelector((state) => state.notes.notes); // get notes from redux store
+
+  // delete note
+  function handleDelete(id) {
+    dispatch({ type: Notes_types.DELETE_NOTE, payload: id });
+  }
   return (
     <>
       <div className="notes_container">
@@ -39,9 +47,13 @@ const Home = () => {
         <div className="container">
           <div className="mt-2 row row-cols-1 row-cols-lg-3 row-cols-md-2">
             {notes &&
-              notes.map((note,index) => (
+              notes.map((note, index) => (
                 <div key={index} className="col mt-2">
-                  <NotesCard carddata={note} />
+                  <NotesCard
+                    id={index}
+                    carddata={note}
+                    onDelete={handleDelete}
+                  />
                 </div>
               ))}
           </div>
