@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-const NotesCard = (props) => {
+export const NotesCard = (props) => {
   const { title, content, date, color } = props.carddata; // destructuring
   const { onDelete, id } = props; // destructuring
   return (
@@ -34,5 +34,3 @@ const NotesCard = (props) => {
     </div>
   );
 };
-
-export default NotesCard;

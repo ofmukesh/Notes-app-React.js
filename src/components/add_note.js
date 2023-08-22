@@ -3,7 +3,7 @@ import { color_options } from "../utils/options";
 import { useDispatch } from "react-redux";
 import { Notes_types } from "../redux/actions";
 
-const AddNote = () => {
+export const AddNote = () => {
   const dispatch = useDispatch(); // dispatch action
 
   const [note, setNote] = useState({
@@ -113,5 +113,3 @@ const AddNote = () => {
     </>
   );
 };
-
-export default AddNote;

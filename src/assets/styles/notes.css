@@ -2,6 +2,16 @@
     transition-duration: .2s !important;
 }
 
+.notes_not_found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    color: #aaa;
+}
+
 /* Notes Header */
 .notes_header .add_btn {
     display: inline-flex;

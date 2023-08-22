@@ -1,14 +1,24 @@
-import { useSelector } from "react-redux";
-import SearchBar from "../components/search_bar";
-import NotesCard from "../components/notes_card";
-import "../assets/styles/notes.css";
-import AddNote from "../components/add_note";
-import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Notes_types } from "../redux/actions";
+import "../assets/styles/notes.css";
+import { AddNote, NotesCard, SearchBar } from "../components";
 
 const Home = () => {
   const dispatch = useDispatch(); // dispatch action
   const notes = useSelector((state) => state.notes.notes); // get notes from redux store
+  const [search, setSearch] = useState(""); // get search from redux store
+
+  // filter notes
+  const filteredNotes = notes.filter((note) =>
+    note.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+  // handle functions for notes
+  // search notes
+  function handleSearch(search) {
+    setSearch(search);
+  }
 
   // delete note
   function handleDelete(id) {
@@ -40,14 +50,14 @@ const Home = () => {
 
         {/* search notes */}
         <div className="mt-3">
-          <SearchBar />
+          <SearchBar onSearch={handleSearch} />
         </div>
 
         {/* notes */}
         <div className="container">
           <div className="mt-2 row row-cols-1 row-cols-lg-3 row-cols-md-2">
-            {notes &&
-              notes.map((note, index) => (
+            {filteredNotes && (filteredNotes.length > 0) ? (
+              filteredNotes.map((note, index) => (
                 <div key={index} className="col mt-2">
                   <NotesCard
                     id={index}
@@ -55,7 +65,10 @@ const Home = () => {
                     onDelete={handleDelete}
                   />
                 </div>
-              ))}
+              ))
+            ) : (
+              <div className="notes_not_found mt-3">No notes found</div>
+            )}
           </div>
         </div>
       </div>

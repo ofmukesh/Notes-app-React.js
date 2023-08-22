@@ -1,6 +1,6 @@
 import "../assets/styles/search_bar.css";
 
-const SearchBar = () => {
+export const SearchBar = ({ onSearch }) => {
   return (
     <div className="search_input">
       <label htmlFor="input" className="labelforsearch">
@@ -16,9 +16,8 @@ const SearchBar = () => {
         className="input"
         id="input"
         placeholder="type to search...."
+        onChange={(e) => onSearch(e.target.value)}
       />
     </div>
   );
 };
-
-export default SearchBar;
