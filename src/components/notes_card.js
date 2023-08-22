@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import React from "react";
+
 const NotesCard = (props) => {
   const { title, content, date, color } = props.carddata; // destructuring
   const { onDelete, id } = props; // destructuring
@@ -6,8 +9,17 @@ const NotesCard = (props) => {
       className="notes_card mt-2 py-2 px-3"
       style={{ backgroundColor: color }}
     >
-      <h4 className="notes_header">{title}</h4>
-      <p className="notes_content">{content}</p>
+      <Link style={{ textDecoration: "none", color: "inherit" }} to={`/${id}`}>
+        <h4 className="notes_header">{title}</h4>
+      </Link>
+      <p className="notes_content">
+        {content.split("\n").map((line, lineIndex) => (
+          <React.Fragment key={lineIndex}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+      </p>
       <div className="notes_footer row">
         <div className="date_updated col">{date}</div>
         <div className="col text-end">
