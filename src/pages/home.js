@@ -22,7 +22,7 @@ const Home = () => {
 
   // delete note
   function handleDelete(id) {
-    dispatch({ type: Notes_types.DELETE_NOTE, payload: id });
+    dispatch({ type: Notes_types.DELETE_NOTE, id: id });
   }
   return (
     <>
