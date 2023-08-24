@@ -10,8 +10,10 @@ const Home = () => {
   const [search, setSearch] = useState(""); // get search from redux store
 
   // filter notes
-  const filteredNotes = notes.filter((note) =>
-    note.title.toLowerCase().includes(search.toLowerCase())
+  const filteredNotes = notes.filter(
+    (note) =>
+      note.title.toLowerCase().includes(search.toLowerCase()) ||
+      note.content.toLowerCase().includes(search.toLowerCase())
   );
 
   // handle functions for notes
@@ -56,7 +58,7 @@ const Home = () => {
         {/* notes */}
         <div className="container">
           <div className="mt-2 row row-cols-1 row-cols-lg-3 row-cols-md-2">
-            {filteredNotes && (filteredNotes.length > 0) ? (
+            {filteredNotes && filteredNotes.length > 0 ? (
               filteredNotes.map((note, index) => (
                 <div key={index} className="col mt-2">
                   <NotesCard

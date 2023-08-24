@@ -15,7 +15,7 @@ export const SearchBar = ({ onSearch }) => {
         name="text"
         className="input"
         id="input"
-        placeholder="type to search...."
+        placeholder="Search in notes..."
         onChange={(e) => onSearch(e.target.value)}
       />
     </div>
