@@ -15,26 +15,35 @@ export const Footer = () => {
             <span className="mt-1 text-muted">© 2023 MarcoSys, Inc.</span>
           </div>
 
-          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex social">
             <li className="ms-3">
-              <a className="text-muted" href="#">
-                <svg className="bi" width="24" height="24">
-                  <a href="/">1</a>
-                </svg>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted"
+                href="https://github.com/ofmukesh"
+              >
+                <i class="fa-brands fa-github"></i>
               </a>
             </li>
             <li className="ms-3">
-              <a className="text-muted" href="#">
-                <svg className="bi" width="24" height="24">
-                  <a href="/">2</a>
-                </svg>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted"
+                href="https://www.linkedin.com/in/ofmukesh/"
+              >
+                <i class="fa-brands fa-linkedin"></i>
               </a>
             </li>
             <li className="ms-3">
-              <a className="text-muted" href="#">
-                <svg className="bi" width="24" height="24">
-                  <a href="/">3</a>
-                </svg>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted"
+                href="https://twitter.com/of_mukesh"
+              >
+                <i class="fa-brands fa-square-twitter"></i>
               </a>
             </li>
           </ul>

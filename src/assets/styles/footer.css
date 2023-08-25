@@ -4,3 +4,7 @@ footer{
     font-size: small;
     background-color: whitesmoke;
 }
+
+footer .social i{
+    font-size: large;
+}
