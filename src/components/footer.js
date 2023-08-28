@@ -23,7 +23,7 @@ export const Footer = () => {
                 className="text-muted"
                 href="https://github.com/ofmukesh"
               >
-                <i class="fa-brands fa-github"></i>
+                <i className="fa-brands fa-github"></i>
               </a>
             </li>
             <li className="ms-3">
@@ -33,7 +33,7 @@ export const Footer = () => {
                 className="text-muted"
                 href="https://www.linkedin.com/in/ofmukesh/"
               >
-                <i class="fa-brands fa-linkedin"></i>
+                <i className="fa-brands fa-linkedin"></i>
               </a>
             </li>
             <li className="ms-3">
@@ -43,7 +43,7 @@ export const Footer = () => {
                 className="text-muted"
                 href="https://twitter.com/of_mukesh"
               >
-                <i class="fa-brands fa-square-twitter"></i>
+                <i className="fa-brands fa-square-twitter"></i>
               </a>
             </li>
           </ul>

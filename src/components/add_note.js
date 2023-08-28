@@ -24,6 +24,9 @@ export const AddNote = () => {
       dispatch({ type: Notes_types.ADD_NOTE, payload: newNote });
     }
     handleClear();
+    // close modal
+    const close_edit_note_modal = document.getElementById('close_edit_note_modal')
+    close_edit_note_modal.click();
   }
   function handleClear() {
     setNote({
@@ -90,6 +93,7 @@ export const AddNote = () => {
               </div>
               <div className="col text-end">
                 <button
+                  id="close_edit_note_modal"
                   type="button"
                   className="btn btn-sm"
                   data-bs-dismiss="modal"

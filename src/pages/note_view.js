@@ -29,7 +29,7 @@ const NoteView = () => {
               <h3 className="card-title">{note.title}</h3>
               <button className="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editNotesModal">
                 <svg
-                  class="svg-icon"
+                  className="svg-icon"
                   fill="none"
                   height="20"
                   viewBox="0 0 24 24"
